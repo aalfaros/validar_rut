@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validar RUT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Validar RUT</h1>
+      <p class="header__text">Algoritmo para validar un RUT Chileno</p>
+    </header>
+    <form action="#" class="form">
+      <div class="form__field">
+        <label for="rut" class="form__label">RUT</label>
+        <input
+          type="text"
+          name="rut"
+          id="rut"
+          class="form__input"
+          placeholder="ingresa un RUT a validar..."
+          onkeyup="mascara(this,formatoRUT)"
+        />
+      </div>
+      <input
+        type="button"
+        id="btn-valida-rut"
+        value="Validar RUT"
+        class="form__submit"
+      />
+    </form>
+    <div class="salida"></div>
+  </body>
+  <script src="main.js"></script>
+</html>
