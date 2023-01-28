@@ -38,7 +38,7 @@ function darFormatoRUT(rut) {
 
 // si presiona ENTER ejecutar la validación
 document.addEventListener('keypress', e => {
-  if (e.keyCode == 13) ejecutarValidacion()
+  if (e.key === 'Enter') ejecutarValidacion()
 })
 
 // oír el clic y si presiona el botón 'Validar RUT' ejecutar la validación
@@ -63,7 +63,7 @@ function ejecutarValidacion() {
     salida.innerHTML = `<p style="color: red;">El RUT ${rut} no es válido</p>`
   }
 
-  document.getElementById('rut').value = ''
+  document.querySelector('#rut').value = ''
 }
 
 function validarRUT(rut) {
